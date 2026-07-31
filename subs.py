@@ -26,5 +26,8 @@ def main():
     with open(STATE_FILE, "w") as f:
         json.dump({"count": current}, f)
 
+    with open("/tmp/current_count.txt", "w") as f:
+        f.write(str(current))
+
 if __name__ == "__main__":
     main()
